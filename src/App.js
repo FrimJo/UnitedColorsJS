@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ImageManager from './models/imagemanager';
 import GameWorld from './models/gameworld';
+import PropTypes from 'prop-types';
 
 
 //red #E91E63
@@ -77,7 +78,7 @@ class CanvasComponent extends Component {
             document.onmousemove = (event)=> {
 
                 let now = Date.now();
-                let delta = now - then;
+                // let delta = now - then;
 
                 // Reset then variable
                 then = now;
@@ -106,8 +107,8 @@ class CanvasComponent extends Component {
 
 
 CanvasComponent.propTypes = {
-    height:React.PropTypes.number,
-    width:React.PropTypes.number
+    height:PropTypes.number,
+    width:PropTypes.number
 };
 
 CanvasComponent.defaultProps = {
